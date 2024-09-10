@@ -7,7 +7,7 @@ import { Logger } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-
+  app.enableCors();
   // Apply global validation pipe
   app.useGlobalPipes(
     new ValidationPipe({

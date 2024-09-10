@@ -8,13 +8,13 @@ import { User } from './auth/user.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mongodb', // Change this to the appropriate type (e.g., mysql, postgres)
-      host: 'localhost', // or your MongoDB host
+      type: 'mongodb',
+      host: 'localhost',
       port: 27017, // default MongoDB port
-      database: 'taskdb', // Your database name
+      database: 'taskdb',
       useUnifiedTopology: true, // Needed for MongoDB
       synchronize: true, // Automatically synchronize entity changes to the database
-      entities: [Task, User], // Path to your entities
+      entities: [Task, User],
     }),
     TasksModule,
     AuthModule,

@@ -1,4 +1,3 @@
-// src/auth/user.entity.ts
 import { Entity, ObjectIdColumn, Column, ObjectId } from 'typeorm';
 
 @Entity('users')
